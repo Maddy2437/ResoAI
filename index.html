@@ -7,8 +7,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
+  <link 
+href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400
+;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
@@ -33,37 +34,34 @@
       }
     }
   </script>
-
   <style>
     *, *::before, *::after { box-sizing: border-box; }
-
     html { background: #050508; }
-
     body {
       font-family: 'Inter', sans-serif;
       background: #050508;
       color: #e8e8f0;
       overflow-x: hidden;
     }
-
     /* ─── GRADIENT CANVAS ─── */
     .hero-canvas {
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(108,99,255,0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(0,212,255,0.10) 0%, transparent 55%),
-        radial-gradient(ellipse 100% 100% at 50% 100%, rgba(108,99,255,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(108,99,255,0.18) 0%, 
+transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(0,212,255,0.10) 0%, 
+transparent 55%),
+        radial-gradient(ellipse 100% 100% at 50% 100%, rgba(108,99,255,0.08) 0%, 
+transparent 50%),
         #050508;
       animation: pulse-bg 8s ease-in-out infinite alternate;
     }
-
     @keyframes pulse-bg {
       0%   { opacity: 1; filter: brightness(1); }
       50%  { opacity: 0.85; filter: brightness(1.15); }
       100% { opacity: 1; filter: brightness(0.95); }
     }
-
     /* Animated grid overlay */
     .hero-grid {
       position: absolute;
@@ -74,12 +72,10 @@
       background-size: 80px 80px;
       animation: grid-drift 20s linear infinite;
     }
-
     @keyframes grid-drift {
       0%   { transform: translateY(0); }
       100% { transform: translateY(80px); }
     }
-
     /* ─── NAV GLASS ─── */
     .nav-glass {
       backdrop-filter: blur(20px) saturate(1.8);
@@ -87,7 +83,6 @@
       background: rgba(5,5,8,0.72);
       border-bottom: 1px solid rgba(108,99,255,0.12);
     }
-
     /* ─── TYPOGRAPHY ─── */
     .hero-headline {
       font-family: 'Bebas Neue', sans-serif;
@@ -95,7 +90,6 @@
       line-height: 0.92;
       letter-spacing: 0.02em;
     }
-
     .section-eyebrow {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.7rem;
@@ -103,25 +97,23 @@
       text-transform: uppercase;
       color: #6C63FF;
     }
-
     .step-number {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(5rem, 12vw, 10rem);
       line-height: 1;
       letter-spacing: -0.02em;
-      background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,212,255,0.08));
+      background: linear-gradient(135deg, rgba(108,99,255,0.15), 
+rgba(0,212,255,0.08));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     /* ─── SLIDER CARDS ─── */
     .work-track {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.5rem;
     }
-
     .work-card {
       min-width: 0;
       background: #13131f;
@@ -134,7 +126,6 @@
                   box-shadow 0.4s ease;
       position: relative;
     }
-
     .work-card::before {
       content: '';
       position: absolute;
@@ -144,15 +135,13 @@
       transition: opacity 0.4s ease;
       z-index: 1;
     }
-
     .work-card:hover {
       transform: translateY(-6px) scale(1.015);
       border-color: rgba(108,99,255,0.5);
-      box-shadow: 0 20px 60px rgba(108,99,255,0.18), 0 0 0 1px rgba(108,99,255,0.2);
+      box-shadow: 0 20px 60px rgba(108,99,255,0.18), 0 0 0 1px 
+rgba(108,99,255,0.2);
     }
-
     .work-card:hover::before { opacity: 1; }
-
     .card-thumb {
       width: 100%;
       aspect-ratio: 16/10;
@@ -160,16 +149,13 @@
       display: block;
       transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
     .work-card:hover .card-thumb { transform: scale(1.04); }
-
   /* ─── PIPELINE GRID ─── */
 .pipeline-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 .pipeline-card {
   position: relative;
   overflow: hidden;
@@ -179,7 +165,6 @@
   border: 1px solid #1e1e30;
   transition: background 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
 }
-
 .pipeline-card::after {
   content: '';
   position: absolute;
@@ -192,36 +177,30 @@
   transform-origin: left;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .pipeline-card:hover {
   background: rgba(108,99,255,0.04);
   border-color: rgba(108,99,255,0.3);
   transform: translateY(-4px);
 }
-
 .pipeline-card:hover::after {
   transform: scaleX(1);
 }
-
 .pipeline-card .step-number {
   font-size: clamp(3.5rem, 6vw, 5rem);
   margin-bottom: 14px;
 }
-
 .pipeline-card .step-number.alt {
   -webkit-text-fill-color: transparent;
   background: linear-gradient(135deg, rgba(0,212,255,0.2), rgba(0,212,255,0.06));
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 .pipeline-card .step-number.alt-mix {
   -webkit-text-fill-color: transparent;
   background: linear-gradient(135deg, rgba(0,212,255,0.2), rgba(108,99,255,0.15));
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 .pipeline-card h3 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(1.9rem, 2.6vw, 2.45rem);
@@ -230,57 +209,50 @@
   color: #fff;
   margin-bottom: 14px;
 }
-
 .pipeline-card p {
   font-size: 0.82rem;
   line-height: 1.65;
   color: #8B8BA7;
   margin-bottom: 18px;
 }
-
 .pipeline-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: auto;
 }
-
 .pipeline-tags .tag {
   font-weight: 700;
 }
-
 @media (max-width: 1024px) {
   .pipeline-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 640px) {
   .pipeline-grid {
     grid-template-columns: 1fr;
   }
-
   .pipeline-card {
     padding: 20px;
   }
-
   .pipeline-card h3 {
     font-size: 2rem;
   }
-
   .pipeline-card p {
     font-size: 0.84rem;
   }
 }
     /* ─── ROI CALCULATOR ─── */
     select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238B8BA7' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg 
+xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 
+12'%3E%3Cpath fill='%238B8BA7' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 1rem center;
       appearance: none;
       -webkit-appearance: none;
     }
-
     /* ─── NEON GLOW BUTTON ─── */
     .btn-primary {
       position: relative;
@@ -289,7 +261,6 @@
       transition: all 0.3s ease;
       overflow: hidden;
     }
-
     .btn-primary::before {
       content: '';
       position: absolute;
@@ -298,23 +269,20 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-
     .btn-primary:hover::before { opacity: 1; }
-    .btn-primary:hover { box-shadow: 0 0 30px rgba(108,99,255,0.5), 0 0 60px rgba(108,99,255,0.2); transform: translateY(-2px); }
-
+    .btn-primary:hover { box-shadow: 0 0 30px rgba(108,99,255,0.5), 0 0 60px 
+rgba(108,99,255,0.2); transform: translateY(-2px); }
     .btn-outline {
       border: 1px solid rgba(108,99,255,0.4);
       color: #6C63FF;
       background: transparent;
       transition: all 0.3s ease;
     }
-
     .btn-outline:hover {
       background: rgba(108,99,255,0.1);
       border-color: #6C63FF;
       box-shadow: 0 0 20px rgba(108,99,255,0.2);
     }
-
     /* ─── SCROLL REVEAL ─── */
     .reveal {
       opacity: 0;
@@ -322,17 +290,14 @@
       transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
                   transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
-
     /* ─── CONTACT INPUT ─── */
     .contact-input {
       background: #0f0f17;
@@ -341,20 +306,17 @@
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
       outline: none;
     }
-
     .contact-input:focus {
       border-color: #6C63FF;
       box-shadow: 0 0 0 3px rgba(108,99,255,0.12);
     }
-
     .contact-input::placeholder { color: #8B8BA7; }
-
     /* ─── ACCENT LINE ─── */
     .accent-line {
       height: 1px;
-      background: linear-gradient(90deg, transparent, #6C63FF, #00D4FF, transparent);
+      background: linear-gradient(90deg, transparent, #6C63FF, #00D4FF, 
+transparent);
     }
-
     /* ─── SLIDER NAV BUTTON ─── */
     .slider-btn {
       background: rgba(19,19,31,0.9);
@@ -363,18 +325,15 @@
       transition: all 0.3s ease;
       color: #8B8BA7;
     }
-
     .slider-btn:hover {
       border-color: #6C63FF;
       color: #6C63FF;
       box-shadow: 0 0 20px rgba(108,99,255,0.2);
     }
-
     .slider-btn:disabled {
       opacity: 0.3;
       cursor: not-allowed;
     }
-
     /* ─── TAG BADGES ─── */
     .tag {
       font-family: 'JetBrains Mono', monospace;
@@ -387,29 +346,25 @@
       color: #6C63FF;
       background: rgba(108,99,255,0.06);
     }
-
     .tag-blue {
       border-color: rgba(0,212,255,0.3);
       color: #00D4FF;
       background: rgba(0,212,255,0.06);
     }
-
     /* ─── SAVINGS TICKER ─── */
     /* ─── FOOTER GLOW ─── */
     .footer-glow {
-      background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(108,99,255,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(108,99,255,0.08) 
+0%, transparent 70%);
     }
-
     /* Mobile adjustments */
     @media (max-width: 1024px) {
       .work-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-
     @media (max-width: 768px) {
       .work-track { grid-template-columns: 1fr; }
       .hero-headline { font-size: clamp(2.8rem, 13vw, 5rem); }
     }
-
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -418,38 +373,46 @@
     }
   </style>
 </head>
-
 <body class="bg-void text-gray-100">
-
   <!-- ══════════════════════════════════════════════════════════════
        NAVIGATION
   ══════════════════════════════════════════════════════════════ -->
-  <nav class="nav-glass fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-4 flex items-center justify-between">
+  <nav class="nav-glass fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-4 flex 
+items-center justify-between">
     <!-- Wordmark -->
-    <a href="#hero" class="flex items-center gap-3 group" aria-label="reso.ai home">
+    <a href="#hero" class="flex items-center gap-3 group" aria-label="reso.ai 
+home">
       <div class="w-7 h-7 relative flex-shrink-0">
-        <div class="absolute inset-0 rounded-full bg-purple opacity-20 blur-md group-hover:opacity-40 transition-opacity"></div>
-        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative z-10 w-7 h-7">
-          <polygon points="14,2 26,8 26,20 14,26 2,20 2,8" fill="none" stroke="#6C63FF" stroke-width="1.5"/>
+        <div class="absolute inset-0 rounded-full bg-purple opacity-20 blur-md 
+group-hover:opacity-40 transition-opacity"></div>
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" 
+class="relative z-10 w-7 h-7">
+          <polygon points="14,2 26,8 26,20 14,26 2,20 2,8" fill="none" 
+stroke="#6C63FF" stroke-width="1.5"/>
           <circle cx="14" cy="14" r="4" fill="#6C63FF" opacity="0.9"/>
-          <line x1="14" y1="2" x2="14" y2="10" stroke="#00D4FF" stroke-width="1" opacity="0.6"/>
-          <line x1="14" y1="18" x2="14" y2="26" stroke="#00D4FF" stroke-width="1" opacity="0.6"/>
+          <line x1="14" y1="2" x2="14" y2="10" stroke="#00D4FF" stroke-width="1" 
+opacity="0.6"/>
+          <line x1="14" y1="18" x2="14" y2="26" stroke="#00D4FF" stroke-width="1" 
+opacity="0.6"/>
         </svg>
       </div>
-      <span class="font-display text-xl tracking-widest text-white">RESO<span class="text-purple">.</span>AI</span>
+      <span class="font-display text-xl tracking-widest text-white">RESO<span 
+class="text-purple">.</span>AI</span>
     </a>
-
     <!-- Desktop Links -->
     <div class="hidden md:flex items-center gap-10">
-      <a href="#work"     class="nav-link font-mono text-xs tracking-widest uppercase text-slate hover:text-white transition-colors">Our Work</a>
-      <a href="#pipeline" class="nav-link font-mono text-xs tracking-widest uppercase text-slate hover:text-white transition-colors">AI Pipeline</a>
-      <a href="#contact"  class="btn-primary relative font-mono text-xs tracking-widest uppercase px-5 py-2.5 text-white rounded-none cursor-pointer">
+      <a href="#work"     class="nav-link font-mono text-xs tracking-widest 
+uppercase text-slate hover:text-white transition-colors">Our Work</a>
+      <!-- <a href="#pipeline" class="nav-link font-mono text-xs tracking-widest 
+uppercase text-slate hover:text-white transition-colors">AI Pipeline</a> -->
+      <a href="#contact"  class="btn-primary relative font-mono text-xs 
+tracking-widest uppercase px-5 py-2.5 text-white rounded-none cursor-pointer">
         <span class="relative z-10">Contact</span>
       </a>
     </div>
-
     <!-- Mobile Hamburger -->
-    <button id="mob-toggle" class="md:hidden p-2 text-slate hover:text-white transition-colors" aria-label="Toggle menu">
+    <button id="mob-toggle" class="md:hidden p-2 text-slate hover:text-white 
+transition-colors" aria-label="Toggle menu">
       <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
         <rect width="22" height="1.5" fill="currentColor"/>
         <rect y="7" width="16" height="1.5" fill="currentColor"/>
@@ -457,34 +420,38 @@
       </svg>
     </button>
   </nav>
-
   <!-- Mobile Menu -->
-  <div id="mob-menu" class="fixed inset-0 z-40 bg-void/95 backdrop-blur-xl flex flex-col items-center justify-center gap-10 hidden">
-    <button id="mob-close" class="absolute top-6 right-6 text-slate hover:text-white transition-colors" aria-label="Close menu">
+  <div id="mob-menu" class="fixed inset-0 z-40 bg-void/95 backdrop-blur-xl flex 
+flex-col items-center justify-center gap-10 hidden">
+    <button id="mob-close" class="absolute top-6 right-6 text-slate 
+hover:text-white transition-colors" aria-label="Close menu">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <line x1="1" y1="1" x2="21" y2="21" stroke="currentColor" stroke-width="1.5"/>
-        <line x1="21" y1="1" x2="1" y2="21" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="1" y1="1" x2="21" y2="21" stroke="currentColor" 
+stroke-width="1.5"/>
+        <line x1="21" y1="1" x2="1" y2="21" stroke="currentColor" 
+stroke-width="1.5"/>
       </svg>
     </button>
-    <a href="#work"     class="mob-link font-display text-5xl tracking-wider text-white hover:text-purple transition-colors">Our Work</a>
-    <a href="#pipeline" class="mob-link font-display text-5xl tracking-wider text-white hover:text-purple transition-colors">AI Pipeline</a>
-    <a href="#contact"  class="mob-link font-display text-5xl tracking-wider text-white hover:text-purple transition-colors">Contact</a>
+    <a href="#work"     class="mob-link font-display text-5xl tracking-wider 
+text-white hover:text-purple transition-colors">Our Work</a>
+    <!-- <a href="#pipeline" class="mob-link font-display text-5xl tracking-wider 
+text-white hover:text-purple transition-colors">AI Pipeline</a> -->
+    <a href="#contact"  class="mob-link font-display text-5xl tracking-wider 
+text-white hover:text-purple transition-colors">Contact</a>
   </div>
-
-
   <!-- ══════════════════════════════════════════════════════════════
        HERO
   ══════════════════════════════════════════════════════════════ -->
-  <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-28 md:pt-32 pb-16">
-
+  <section id="hero" class="relative min-h-screen flex flex-col items-center 
+justify-center overflow-hidden pt-28 md:pt-32 pb-16">
     <!-- Background canvas layers -->
     <div class="hero-canvas"></div>
     <div class="hero-grid"></div>
-
     <!-- Floating orbs -->
-    <div class="absolute w-96 h-96 rounded-full bg-purple/5 blur-3xl top-1/4 left-1/4 animate-pulse" style="animation-duration:6s;"></div>
-    <div class="absolute w-64 h-64 rounded-full bg-blue/5 blur-3xl bottom-1/3 right-1/4 animate-pulse" style="animation-duration:9s; animation-delay:2s;"></div>
-
+    <div class="absolute w-96 h-96 rounded-full bg-purple/5 blur-3xl top-1/4 
+left-1/4 animate-pulse" style="animation-duration:6s;"></div>
+    <div class="absolute w-64 h-64 rounded-full bg-blue/5 blur-3xl bottom-1/3 
+right-1/4 animate-pulse" style="animation-duration:9s; animation-delay:2s;"></div>
     <!-- Content -->
     <div class="relative z-10 text-center px-6 max-w-7xl mx-auto">
       <!-- Eyebrow -->
@@ -493,70 +460,77 @@
         <span>Mumbai <span>
         <div class="h-px w-12 bg-purple/50"></div>
       </div>
-
       <!-- Main Headline -->
       <h1 class="hero-headline text-white mb-6">
         <span class="block">STUDIO-GRADE</span>
         <span class="block relative">
           VFX.
-          <span style="background: linear-gradient(135deg, #6C63FF, #00D4FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"> POWERED</span>
+          <span style="background: linear-gradient(135deg, #6C63FF, #00D4FF); 
+-webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+background-clip: text;"> POWERED</span>
         </span>
         <span class="block">BY AI.</span>
       </h1>
-
       <!-- Sub-headline -->
-      <p class="text-slate text-lg md:text-xl font-light max-w-2xl mx-auto mb-12 leading-relaxed">
-        We collapse the gap between vision and final-frame.<br class="hidden md:block"/>
+      <p class="text-slate text-lg md:text-xl font-light max-w-2xl mx-auto mb-12 
+leading-relaxed">
+        We collapse the gap between vision and final-frame.<br class="hidden 
+md:block"/>
         Cinematic post-production at a fraction of the timeline and cost.
       </p>
-
       <!-- CTAs -->
       <div class="flex items-center justify-center"></div>
-        <a href="#work" class="btn-primary relative px-8 py-4 font-body font-semibold text-sm tracking-wider text-white uppercase rounded-none inline-block cursor-pointer">
+        <a href="#work" class="btn-primary relative px-8 py-4 font-body 
+font-semibold text-sm tracking-wider text-white uppercase rounded-none inline-block
+cursor-pointer">
           <span class="relative z-10">View Our Reel</span>
         </a>
       </div>
-
       <!-- Stats strip -->
-      <div class="mt-20 grid grid-cols-3 gap-4 max-w-2xl mx-auto border-t border-border pt-10">
+      <div class="mt-20 grid grid-cols-3 gap-4 max-w-2xl mx-auto border-t 
+border-border pt-10">
         <div class="text-center">
-          <div class="font-display text-4xl md:text-5xl text-white">73<span class="text-purple">%</span></div>
-          <div class="font-mono text-xs text-slate mt-1 tracking-widest uppercase">Cost Reduction</div>
+          <div class="font-display text-4xl md:text-5xl text-white">73<span 
+class="text-purple">%</span></div>
+          <div class="font-mono text-xs text-slate mt-1 tracking-widest 
+uppercase">Cost Reduction</div>
         </div>
         <div class="text-center border-x border-border">
-          <div class="font-display text-4xl md:text-5xl text-white">10<span class="text-blue">×</span></div>
-          <div class="font-mono text-xs text-slate mt-1 tracking-widest uppercase">Faster Delivery</div>
+          <div class="font-display text-4xl md:text-5xl text-white">10<span 
+class="text-blue">×</span></div>
+          <div class="font-mono text-xs text-slate mt-1 tracking-widest 
+uppercase">Faster Delivery</div>
         </div>
         <div class="text-center">
-          <div class="font-display text-4xl md:text-5xl text-white">AAA<span class="text-purple">+</span></div>
-          <div class="font-mono text-xs text-slate mt-1 tracking-widest uppercase">Output Quality</div>
+          <div class="font-display text-4xl md:text-5xl text-white">AAA<span 
+class="text-purple">+</span></div>
+          <div class="font-mono text-xs text-slate mt-1 tracking-widest 
+uppercase">Output Quality</div>
         </div>
       </div>
     </div>
   </section>
-
-
   <!-- ══════════════════════════════════════════════════════════════
        OUR WORK — SLIDER
   ══════════════════════════════════════════════════════════════ -->
   <section id="work" class="py-24 md:py-36 overflow-hidden">
-
     <!-- Section header -->
-    <div class="px-6 md:px-16 mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
+    <div class="px-6 md:px-16 mb-14 flex flex-col md:flex-row md:items-end 
+md:justify-between gap-6 reveal">
       <div>
         <div class="section-eyebrow mb-4">Selected Projects</div>
-        <h2 class="font-display text-6xl md:text-8xl text-white tracking-wide">OUR<br/>WORK</h2>
+        <h2 class="font-display text-6xl md:text-8xl text-white 
+tracking-wide">OUR<br/>WORK</h2>
       </div>
       <div class="max-w-xs">
-        <p class="text-slate text-sm leading-relaxed">From blockbuster VFX to AI-powered product films — every frame engineered for impact.</p>
+        <p class="text-slate text-sm leading-relaxed">From blockbuster VFX to 
+AI-powered product films — every frame engineered for impact.</p>
       </div>
     </div>
-
     <!-- Project grid container -->
     <div class="relative px-6 md:px-16">
       <div>
        <div class="work-track" id="work-track">
-
   <!-- Card 1 -->
   <div class="work-card reveal reveal-delay-1">
     <div class="overflow-hidden">
@@ -571,7 +545,9 @@
         <h3 class="font-display text-2xl tracking-wide text-white">Honda</h3>
         <span class="tag">VFX</span>
       </div>
-      <p class="text-slate text-sm leading-relaxed mb-4">847 shots of composite destruction sequences, crowd replication, and AI-assisted colour science for the highest-grossing Indian film.</p>
+      <p class="text-slate text-sm leading-relaxed mb-4">847 shots of composite 
+destruction sequences, crowd replication, and AI-assisted colour science for the 
+highest-grossing Indian film.</p>
       <div class="flex gap-2 flex-wrap">
         <span class="tag">Houdini</span>
         <span class="tag">Nuke</span>
@@ -579,7 +555,6 @@
       </div>
     </div>
   </div>
-
   <!-- Card 2 -->
   <div class="work-card reveal reveal-delay-2">
     <div class="overflow-hidden">
@@ -591,10 +566,12 @@
     </div>
     <div class="p-6 z-10 relative">
       <div class="flex items-start justify-between mb-3">
-        <h3 class="font-display text-2xl tracking-wide text-white">pringles pop</h3>
+        <h3 class="font-display text-2xl tracking-wide text-white">Pringles</h3>
         <span class="tag-blue tag">MCU</span>
       </div>
-      <p class="text-slate text-sm leading-relaxed mb-4">Quantum-realm environment generation and hero asset pipeline for Marvel Studios. AI upscaling preserved visual integrity at 4K IMAX.</p>
+      <p class="text-slate text-sm leading-relaxed mb-4">Quantum-realm environment 
+generation and hero asset pipeline for Marvel Studios. AI upscaling preserved 
+visual integrity at 4K IMAX.</p>
       <div class="flex gap-2 flex-wrap">
         <span class="tag">Maya</span>
         <span class="tag">Arnold</span>
@@ -602,7 +579,6 @@
       </div>
     </div>
   </div>
-
   <!-- Card 3 -->
   <div class="work-card reveal reveal-delay-3">
     <div class="overflow-hidden">
@@ -614,19 +590,46 @@
     </div>
     <div class="p-6 z-10 relative">
       <div class="flex items-start justify-between mb-3">
-        <h3 class="font-display text-2xl tracking-wide text-white">Black dog</h3>
+        <h3 class="font-display text-2xl tracking-wide text-white">Black Dog 
+Soda</h3>
         <span class="tag">Product</span>
       </div>
-      <p class="text-slate text-sm leading-relaxed mb-4">Full CG product reel for tier-1 fashion house. AI material simulation cut render time by 68% while achieving photographic surface realism.</p>
+      <p class="text-slate text-sm leading-relaxed mb-4">Full CG product reel for 
+tier-1 fashion house. AI material simulation cut render time by 68% while achieving
+photographic surface realism.</p>
       <div class="flex gap-2 flex-wrap">
         <span class="tag">Blender</span>
         <span class="tag-blue tag">AI Render</span>
       </div>
     </div>
   </div>
-
   <!-- Card 4 -->
   <div class="work-card reveal">
+    <div class="overflow-hidden">
+      <div class="card-thumb" style="aspect-ratio:16/10;">
+        <video autoplay loop muted playsinline class="w-full h-full object-cover">
+          <source src="assets/montecarlo.webm" type="video/webm">
+        </video>
+      </div>
+    </div>
+    <div class="p-6 z-10 relative">
+      <div class="flex items-start justify-between mb-3">
+        <h3 class="font-display text-2xl tracking-wide text-white">AI AD 
+PIPELINE</h3>
+        <span class="tag-blue tag">Speculative</span>
+      </div>
+      <p class="text-slate text-sm leading-relaxed mb-4">Reso.ai's own speculative 
+reel demonstrating end-to-end AI pipeline from brief to broadcast-ready spot in 
+under 14 days.</p>
+      <div class="flex gap-2 flex-wrap">
+        <span class="tag-blue tag">Gen-2</span>
+        <span class="tag-blue tag">Sora</span>
+        <span class="tag">ComfyUI</span>
+      </div>
+    </div>
+  </div>
+  <!-- Card 5 -->
+  <div class="work-card reveal reveal-delay-2">
     <div class="overflow-hidden">
       <div class="card-thumb" style="aspect-ratio:16/10;">
         <video autoplay loop muted playsinline class="w-full h-full object-cover">
@@ -636,19 +639,20 @@
     </div>
     <div class="p-6 z-10 relative">
       <div class="flex items-start justify-between mb-3">
-        <h3 class="font-display text-2xl tracking-wide text-white">AI AD PIPELINE</h3>
-        <span class="tag-blue tag">Speculative</span>
+        <h3 class="font-display text-2xl tracking-wide text-white">ChocoMix</h3>
+        <span class="tag">PRODUCT</span>
       </div>
-      <p class="text-slate text-sm leading-relaxed mb-4">Reso.ai's own speculative reel demonstrating end-to-end AI pipeline from brief to broadcast-ready spot in under 14 days.</p>
+      <p class="text-slate text-sm leading-relaxed mb-4">AI-driven fluid simulation
+and photorealistic texture mapping for next-generation confectionery 
+advertising.</p>
       <div class="flex gap-2 flex-wrap">
-        <span class="tag-blue tag">Gen-2</span>
-        <span class="tag-blue tag">Sora</span>
-        <span class="tag">ComfyUI</span>
+        <span class="tag">BLENDER</span>
+        <span class="tag-blue tag">AI FLUID</span>
+        <span class="tag">PREMIERE</span>
       </div>
     </div>
   </div>
-
-  <!-- Card 5 -->
+  <!-- Card 6 -->
   <div class="work-card reveal reveal-delay-1">
     <div class="overflow-hidden">
       <div class="card-thumb" style="aspect-ratio:16/10;">
@@ -659,53 +663,51 @@
     </div>
     <div class="p-6 z-10 relative">
       <div class="flex items-start justify-between mb-3">
-        <h3 class="font-display text-2xl tracking-wide text-white">CORP BRAND FILM</h3>
+        <h3 class="font-display text-2xl tracking-wide text-white">CORP BRAND 
+FILM</h3>
         <span class="tag">Brand</span>
       </div>
-      <p class="text-slate text-sm leading-relaxed mb-4">5-minute origin story film for a Fortune 500 infrastructure giant. AI-assisted rotoscoping and comp work across 200+ live-action shots.</p>
+      <p class="text-slate text-sm leading-relaxed mb-4">5-minute origin story film
+for a Fortune 500 infrastructure giant. AI-assisted rotoscoping and comp work 
+across 200+ live-action shots.</p>
       <div class="flex gap-2 flex-wrap">
         <span class="tag">DaVinci</span>
         <span class="tag-blue tag">AI Roto</span>
       </div>
     </div>
   </div>
-
 </div><!-- /work-track -->
       </div>
-
     </div>
     
     <!-- Section Transition -->
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-void to-transparent pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-void 
+to-transparent pointer-events-none"></div>
   </section>
-
-
   <div class="accent-line mx-16"></div>
-
-
   <!-- ══════════════════════════════════════════════════════════════
        AI PIPELINE
   ══════════════════════════════════════════════════════════════ -->
- <section id="pipeline" class="relative py-24 md:py-36 px-6 md:px-16 overflow-hidden">
-
-  <!-- Header -->
+  <!--
+  <section id="pipeline" class="relative py-24 md:py-36 px-6 md:px-16 
+overflow-hidden">
   <div class="mb-14 reveal">
     <div class="section-eyebrow mb-4">How It Works</div>
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-      <h2 class="font-display text-6xl md:text-8xl text-white tracking-wide leading-none">THE<br/>PIPELINE</h2>
-      <p class="text-slate text-sm max-w-xs leading-relaxed md:text-right">Four decisive stages. One studio-grade outcome. No bloat, no waiting.</p>
+      <h2 class="font-display text-6xl md:text-8xl text-white tracking-wide 
+leading-none">THE<br/>PIPELINE</h2>
+      <p class="text-slate text-sm max-w-xs leading-relaxed md:text-right">Four 
+decisive stages. One studio-grade outcome. No bloat, no waiting.</p>
     </div>
   </div>
-
-  <!-- Pipeline Grid -->
   <div class="pipeline-grid">
-
-    <!-- Step 01 -->
     <div class="pipeline-card reveal">
       <div class="step-number">01</div>
       <div class="section-eyebrow mb-3">Stage One</div>
       <h3>Ingestion</h3>
-      <p>Raw assets, briefs, scripts, and reference reels are fed into our secure ingestion layer. AI parsing builds a unified semantic map of the project: style, tone, motion language, and brand constraints.</p>
+      <p>Raw assets, briefs, scripts, and reference reels are fed into our secure 
+ingestion layer. AI parsing builds a unified semantic map of the project: style, 
+tone, motion language, and brand constraints.</p>
       <div class="pipeline-tags">
         <span class="tag">Brief PDF</span>
         <span class="tag">Reference Reels</span>
@@ -713,13 +715,13 @@
         <span class="tag tag-blue">Script</span>
       </div>
     </div>
-
-    <!-- Step 02 -->
     <div class="pipeline-card reveal reveal-delay-1">
       <div class="step-number alt">02</div>
       <div class="section-eyebrow mb-3" style="color:#00D4FF;">Stage Two</div>
       <h3>Pre-Vis Drafting</h3>
-      <p>Multimodal generative models produce shot-by-shot pre-visualisations: storyboards, animatics, and rough 3D blocking, all in parallel and ready for fast creative review.</p>
+      <p>Multimodal generative models produce shot-by-shot pre-visualisations: 
+storyboards, animatics, and rough 3D blocking, all in parallel and ready for fast 
+creative review.</p>
       <div class="pipeline-tags">
         <span class="tag tag-blue">Sora</span>
         <span class="tag tag-blue">Runway Gen-3</span>
@@ -727,26 +729,26 @@
         <span class="tag">Proprietary LLM</span>
       </div>
     </div>
-
-    <!-- Step 03 -->
     <div class="pipeline-card reveal reveal-delay-2">
       <div class="step-number">03</div>
       <div class="section-eyebrow mb-3">Stage Three</div>
       <h3>Hybrid Refinement</h3>
-      <p>Senior VFX artists intervene precisely where human judgement is irreplaceable: edge cases, brand-critical moments, physics anomalies, and creative polish.</p>
+      <p>Senior VFX artists intervene precisely where human judgement is 
+irreplaceable: edge cases, brand-critical moments, physics anomalies, and creative 
+polish.</p>
       <div class="pipeline-tags">
         <span class="tag">Creative Dir.</span>
         <span class="tag">VFX Supervisor</span>
         <span class="tag tag-blue">AI QA Loop</span>
       </div>
     </div>
-
-    <!-- Step 04 -->
     <div class="pipeline-card reveal reveal-delay-3">
       <div class="step-number alt-mix">04</div>
       <div class="section-eyebrow mb-3" style="color:#00D4FF;">Stage Four</div>
       <h3>Final Studio Master</h3>
-      <p>Broadcast-grade colour grade, AI-assisted spatial audio mix, and a full QA pass against deliverable specifications for DCP, OTT, social, and out-of-home formats.</p>
+      <p>Broadcast-grade colour grade, AI-assisted spatial audio mix, and a full QA
+pass against deliverable specifications for DCP, OTT, social, and out-of-home 
+formats.</p>
       <div class="pipeline-tags">
         <span class="tag">4K DCP</span>
         <span class="tag">HDR OTT</span>
@@ -754,46 +756,53 @@
         <span class="tag">Social Cuts</span>
       </div>
     </div>
-
   </div>
-
-  <!-- Section Transition -->
-  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-void to-transparent pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-void 
+to-transparent pointer-events-none"></div>
 </section>
-
+-->
   <!-- ══════════════════════════════════════════════════════════════
        ROI CALCULATOR
   ══════════════════════════════════════════════════════════════ -->
-
   <!-- ══════════════════════════════════════════════════════════════
        FOOTER / CONTACT
   ══════════════════════════════════════════════════════════════ -->
-<footer id="contact" class="footer-glow border-t border-border pt-20 pb-12 px-6 md:px-16">
-
+<footer id="contact" class="footer-glow border-t border-border pt-20 pb-12 px-6 
+md:px-16">
   <!-- Big CTA Heading -->
   <div class="mb-16 reveal">
     <div class="section-eyebrow mb-6">Start The Conversation</div>
-    <h2 class="font-display text-5xl md:text-7xl lg:text-8xl text-white tracking-wide leading-none mb-8">
+    <h2 class="font-display text-5xl md:text-7xl lg:text-8xl text-white 
+tracking-wide leading-none mb-8">
       LET'S BUILD<br/>
-      <span style="background:linear-gradient(135deg,#6C63FF,#00D4FF); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">SOMETHING</span><br/>
+      <span style="background:linear-gradient(135deg,#6C63FF,#00D4FF); 
+-webkit-background-clip:text; -webkit-text-fill-color:transparent; 
+background-clip:text;">SOMETHING</span><br/>
       ICONIC.
     </h2>
-    <p class="text-slate text-base max-w-md leading-relaxed">Tell us about your project and we'll send a tailored pipeline brief and cost estimate within 24 hours.</p>
+    <p class="text-slate text-base max-w-md leading-relaxed">Tell us about your 
+project and we'll send a tailored pipeline brief and cost estimate within 24 
+hours.</p>
   </div>
-
   <!-- Contact Grid -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 reveal reveal-delay-1">
-
     <!-- Left: Contact Form -->
     <div class="space-y-4">
       <div>
-        <input type="text" placeholder="Your Name" class="contact-input w-full py-4 px-5 font-body text-sm rounded-none" />
+        <input type="text" placeholder="Your Name" class="contact-input w-full py-4
+px-5 font-body text-sm rounded-none" />
       </div>
       <div>
-        <input type="email" placeholder="Business Email" class="contact-input w-full py-4 px-5 font-body text-sm rounded-none" />
+        <input type="email" placeholder="Business Email" class="contact-input 
+w-full py-4 px-5 font-body text-sm rounded-none" />
       </div>
       <div>
-        <select class="contact-input w-full py-4 px-5 font-body text-sm text-slate rounded-none bg-void border border-border" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238B8BA7' d='M6 8L1 3h10z'/%3E%3C/svg%3E&quot;); background-repeat:no-repeat; background-position: right 1rem center; appearance:none;">
+        <select class="contact-input w-full py-4 px-5 font-body text-sm text-slate 
+rounded-none bg-void border border-border" style="background-image: 
+url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' 
+height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238B8BA7' d='M6 8L1 
+3h10z'/%3E%3C/svg%3E&quot;); background-repeat:no-repeat; background-position: 
+right 1rem center; appearance:none;">
           <option value="">Project Type</option>
           <option>Brand Film</option>
           <option>Product CGI</option>
@@ -803,112 +812,152 @@
         </select>
       </div>
       <div>
-        <textarea placeholder="Describe your project..." rows="4" class="contact-input w-full py-4 px-5 font-body text-sm rounded-none resize-none"></textarea>
+        <textarea placeholder="Describe your project..." rows="4" 
+class="contact-input w-full py-4 px-5 font-body text-sm rounded-none 
+resize-none"></textarea>
       </div>
-      <button class="btn-primary relative w-full py-4 font-body font-semibold text-sm tracking-wider text-white uppercase rounded-none cursor-pointer">
+      <button class="btn-primary relative w-full py-4 font-body font-semibold 
+text-sm tracking-wider text-white uppercase rounded-none cursor-pointer">
         <span class="relative z-10">Send Brief →</span>
       </button>
-      <a href="https://resonancedigital.in" target="_blank" class="btn-primary relative w-full py-4 font-body font-semibold text-sm tracking-wider text-white uppercase rounded-none cursor-pointer inline-block text-center">
+      <a href="https://resonancedigital.in" target="_blank" class="btn-primary 
+relative w-full py-4 font-body font-semibold text-sm tracking-wider text-white 
+uppercase rounded-none cursor-pointer inline-block text-center">
         <span class="relative z-10">Visit Main Website →</span>
       </a>
     </div>
-
     <!-- Right: Info -->
     <div class="space-y-8 pt-2">
-
       <!-- Response time -->
       <div class="bg-surface border border-border p-5 relative">
-        <div class="absolute top-0 left-0 bottom-0 w-0.5 bg-gradient-to-b from-purple to-blue"></div>
-        <div class="font-mono text-xs text-slate/60 tracking-widest uppercase mb-2">Response SLA</div>
+        <div class="absolute top-0 left-0 bottom-0 w-0.5 bg-gradient-to-b 
+from-purple to-blue"></div>
+        <div class="font-mono text-xs text-slate/60 tracking-widest uppercase 
+mb-2">Response SLA</div>
         <div class="font-display text-3xl text-white">24 HOURS</div>
-        <div class="font-mono text-xs text-slate/60 mt-1">For qualified enterprise inquiries</div>
+        <div class="font-mono text-xs text-slate/60 mt-1">For qualified enterprise 
+inquiries</div>
       </div>
-
       <!-- Direct contact -->
       <div>
-        <div class="font-mono text-xs text-slate/60 tracking-widest uppercase mb-3">Direct Contact</div>
+        <div class="font-mono text-xs text-slate/60 tracking-widest uppercase 
+mb-3">Direct Contact</div>
         <div class="space-y-2">
-          <a href="mailto:abhyuday@resonancedigital.in" class="group flex items-center gap-3 font-body text-white hover:text-purple transition-colors">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="text-purple flex-shrink-0">
-              <rect x="1" y="3" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
+          <a href="mailto:abhyuday@resonancedigital.in" class="group flex 
+items-center gap-3 font-body text-white hover:text-purple transition-colors">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" 
+class="text-purple flex-shrink-0">
+              <rect x="1" y="3" width="14" height="10" rx="1" stroke="currentColor"
+stroke-width="1.2"/>
               <path d="M1 4L8 9L15 4" stroke="currentColor" stroke-width="1.2"/>
             </svg>
             <span class="text-sm">abhyuday@resonancedigital.in</span>
           </a>
-          <a href="mailto:studio@reso.ai" class="group flex items-center gap-3 font-body text-slate hover:text-white transition-colors">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="text-slate/40 flex-shrink-0">
-              <rect x="1" y="3" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
+          <a href="mailto:studio@reso.ai" class="group flex items-center gap-3 
+font-body text-slate hover:text-white transition-colors">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" 
+class="text-slate/40 flex-shrink-0">
+              <rect x="1" y="3" width="14" height="10" rx="1" stroke="currentColor"
+stroke-width="1.2"/>
               <path d="M1 4L8 9L15 4" stroke="currentColor" stroke-width="1.2"/>
             </svg>
             <span class="text-sm">studio@reso.ai</span>
           </a>
         </div>
       </div>
-
       <!-- Locations -->
       <div>
-        <div class="font-mono text-xs text-slate/60 tracking-widest uppercase mb-3">Studios</div>
+        <div class="font-mono text-xs text-slate/60 tracking-widest uppercase 
+mb-3">Studios</div>
         <div class="space-y-2 text-sm text-slate">
           <div class="flex items-center gap-3">
             <div class="w-1.5 h-1.5 rounded-full bg-purple flex-shrink-0"></div>
             Mumbai, India — Primary Production
           </div>
         </div>
-
         <!-- Social links -->
         <div class="flex items-center gap-3 mt-6">
-          <a href="https://resonancedigital.in" target="_blank" aria-label="Website" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate/20 text-slate hover:text-white hover:border-purple hover:bg-purple/10 transition-all duration-300">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/>
-              <path d="M3 12h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-              <path d="M12 3c2.2 2.5 3.4 5.5 3.4 9s-1.2 6.5-3.4 9c-2.2-2.5-3.4-5.5-3.4-9S9.8 5.5 12 3Z" stroke="currentColor" stroke-width="1.7"/>
+          <a href="https://resonancedigital.in" target="_blank" 
+aria-label="Website" class="w-12 h-12 flex items-center justify-center rounded-full
+border border-slate/20 text-slate hover:text-white hover:border-purple 
+hover:bg-purple/10 transition-all duration-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" 
+aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" 
+stroke-width="1.7"/>
+              <path d="M3 12h18" stroke="currentColor" stroke-width="1.7" 
+stroke-linecap="round"/>
+              <path d="M12 3c2.2 2.5 3.4 5.5 3.4 9s-1.2 6.5-3.4 
+9c-2.2-2.5-3.4-5.5-3.4-9S9.8 5.5 12 3Z" stroke="currentColor" stroke-width="1.7"/>
             </svg>
           </a>
-
-          <a href="#" aria-label="Facebook" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate/20 text-slate hover:text-white hover:border-purple hover:bg-purple/10 transition-all duration-300">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M14.2 8.3V6.9c0-.7.5-.9.9-.9h2.3V2.2L14.2 2c-3.6 0-4.4 2.7-4.4 4.4v1.9H7v4.1h2.8V22h4.4v-9.6h3.1l.5-4.1h-3.6Z"/>
+          <a href="https://www.facebook.com/resonancedigitalllp/" 
+aria-label="Facebook" class="w-12 h-12 flex items-center justify-center 
+rounded-full border border-slate/20 text-slate hover:text-white hover:border-purple
+hover:bg-purple/10 transition-all duration-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" 
+aria-hidden="true">
+              <path d="M14.2 8.3V6.9c0-.7.5-.9.9-.9h2.3V2.2L14.2 2c-3.6 0-4.4 
+2.7-4.4 4.4v1.9H7v4.1h2.8V22h4.4v-9.6h3.1l.5-4.1h-3.6Z"/>
             </svg>
           </a>
-
-          <a href="#" aria-label="YouTube" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate/20 text-slate hover:text-white hover:border-purple hover:bg-purple/10 transition-all duration-300">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M22 12s0-3.3-.4-4.9c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.7 2 12 2 12s0 3.3.4 4.9c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.9.4-4.9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+          <a href="https://www.youtube.com/@Resonance2016" aria-label="YouTube" 
+class="w-12 h-12 flex items-center justify-center rounded-full border 
+border-slate/20 text-slate hover:text-white hover:border-purple hover:bg-purple/10 
+transition-all duration-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" 
+aria-hidden="true">
+              <path d="M22 12s0-3.3-.4-4.9c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 
+5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.7 2 12 2 12s0 3.3.4 4.9c.2.9.9 1.6 1.8 1.8 
+1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.9.4-4.9Z" 
+stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
               <path d="M10 9.4v5.2l4.8-2.6L10 9.4Z" fill="currentColor"/>
             </svg>
           </a>
-
-          <a href="#" aria-label="Instagram" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate/20 text-slate hover:text-white hover:border-purple hover:bg-purple/10 transition-all duration-300">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/>
-              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/>
+          <a href="https://www.instagram.com/resonancedigital/?hl=en" 
+aria-label="Instagram" class="w-12 h-12 flex items-center justify-center 
+rounded-full border border-slate/20 text-slate hover:text-white hover:border-purple
+hover:bg-purple/10 transition-all duration-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" 
+aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"
+stroke-width="1.7"/>
+              <circle cx="12" cy="12" r="4" stroke="currentColor" 
+stroke-width="1.7"/>
               <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
             </svg>
           </a>
-
-          <a href="#" aria-label="LinkedIn" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate/20 text-slate hover:text-white hover:border-purple hover:bg-purple/10 transition-all duration-300">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M5.1 8.8h3.7V21H5.1V8.8Zm1.8-6A2.1 2.1 0 1 1 6.9 7a2.1 2.1 0 0 1 0-4.2ZM11.2 8.8h3.5v1.7h.1c.5-.9 1.7-2 3.5-2 3.8 0 4.5 2.5 4.5 5.7V21h-3.7v-6c0-1.4 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V21h-3.7V8.8Z"/>
+          <a 
+href="https://www.linkedin.com/company/resonance-digital/posts/?feedView=all" 
+aria-label="LinkedIn" class="w-12 h-12 flex items-center justify-center 
+rounded-full border border-slate/20 text-slate hover:text-white hover:border-purple
+hover:bg-purple/10 transition-all duration-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" 
+aria-hidden="true">
+              <path d="M5.1 8.8h3.7V21H5.1V8.8Zm1.8-6A2.1 2.1 0 1 1 6.9 7a2.1 2.1 0
+0 1 0-4.2ZM11.2 8.8h3.5v1.7h.1c.5-.9 1.7-2 3.5-2 3.8 0 4.5 2.5 4.5 
+5.7V21h-3.7v-6c0-1.4 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V21h-3.7V8.8Z"/>
             </svg>
           </a>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Footer bar -->
-  <div class="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+  <div class="border-t border-border pt-8 flex flex-col md:flex-row items-center 
+justify-between gap-4">
     <div class="flex items-center gap-3">
-      <span class="font-display text-lg tracking-widest text-white">RESO<span class="text-purple">.</span>AI</span>
+      <span class="font-display text-lg tracking-widest text-white">RESO<span 
+class="text-purple">.</span>AI</span>
       <span class="text-border">|</span>
-      <span class="font-mono text-xs text-slate/50">An AI-native evolution of Resonance Digital</span>
+      <span class="font-mono text-xs text-slate/50">An AI-native evolution of 
+Resonance Digital</span>
     </div>
     <div class="font-mono text-xs text-slate/40 tracking-widest">
       © 2025 RESONANCE DIGITAL. ALL RIGHTS RESERVED.
     </div>
   </div>
 </footer>
-
   <!-- ══════════════════════════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════════════════════════ -->
@@ -918,15 +967,13 @@
     const mobClose  = document.getElementById('mob-close');
     const mobMenu   = document.getElementById('mob-menu');
     const mobLinks  = document.querySelectorAll('.mob-link');
-
-    function openMenu()  { mobMenu.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
-    function closeMenu() { mobMenu.classList.add('hidden');    document.body.style.overflow = '';        }
-
+    function openMenu()  { mobMenu.classList.remove('hidden'); 
+document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobMenu.classList.add('hidden');    
+document.body.style.overflow = '';        }
     mobToggle.addEventListener('click', openMenu);
     mobClose.addEventListener('click', closeMenu);
     mobLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-
     // ─── SMOOTH SCROLL ────────────────────────────────────────────────
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -938,8 +985,6 @@
         window.scrollTo({ top: y, behavior: 'smooth' });
       });
     });
-
-
     // ─── SCROLL REVEAL ────────────────────────────────────────────────
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -949,13 +994,9 @@
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-
     // ─── WORK SLIDER ──────────────────────────────────────────────────
     // ─── ROI CALCULATOR ───────────────────────────────────────────────
 </script>
-
 </body>
 </html>
